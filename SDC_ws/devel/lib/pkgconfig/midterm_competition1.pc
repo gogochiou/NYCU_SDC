@@ -1,0 +1,8 @@
+prefix=/home/gogochiou/SDC_ws/devel
+
+Name: midterm_competition1
+Description: Description of midterm_competition1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

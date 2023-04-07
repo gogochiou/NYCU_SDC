@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<launch>
+
+    <node name="map_publisher" pkg="map_tile_loader" type="map_publisher" output="screen">
+        <param name="map_path" type="string" value="/home/gogochiou/SDC_ws/data/nuscenes_maps" />
+        <!-- <param name="search_radius" type="float" value="50."/> -->
+    </node>
+
+    <!-- <node pkg="rviz" type="rviz" name="display_result" output="screen" args="-d $(find localization)/config/nuscenes.rviz" /> -->
+
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/gogochiou/SDC_ws/devel
+
+Name: tutorial_practice
+Description: Description of tutorial_practice
+Version: 0.0.0
+Cflags: -I/home/gogochiou/SDC_ws/src/tutorial_practice/include
+Libs: -L${prefix}/lib -ltutorial_practice
+Requires: nav_msgs roscpp rospy std_msgs

@@ -1,0 +1,35 @@
+ Step 1:
+    xhost +local:
+ 
+ Step 2:
+ sudo docker run \
+ -it \
+ --env="DISPLAY" \
+ --env="QT_X11_NO_MITSHM=1" \
+ --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+ --rm \
+ --name prediction \
+ --user root \
+ -e GRANT_SUDO=yes \
+ -v /home/gogochiou/SDC_ws/motion_prediction:/root/motion_prediction \
+ softmac/sdc-course-docker:prediction \
+ bash
+
+Step 3:
+# install torchviz
+pip install graphviz torchviz
+
+Another testing file
+  sudo docker run \
+ -it \
+ --env="DISPLAY" \
+ --env="QT_X11_NO_MITSHM=1" \
+ --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+ --rm \
+ --name prediction \
+ --user root \
+ -e GRANT_SUDO=yes \
+ -v /home/gogochiou/SDC_ws/motion_prediction2:/root/motion_prediction \
+ softmac/sdc-course-docker:prediction \
+ bash
+

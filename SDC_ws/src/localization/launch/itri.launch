@@ -1,0 +1,26 @@
+<launch>
+
+    <!-- Need launch itri_rviz first -->
+    <arg name="save_path" default="$(find localization)/results/Result_1/test.csv" />
+    <param name="use_sim_time" value="true" />
+
+    <!-- <node pkg="rviz" type="rviz" name="display_result" output="screen" args="-d $(find localization)/config/itri.rviz" /> -->
+
+    <!-- <node pkg="localization" type="localizer" name="localizer" output="screen">
+        <rosparam file="$(find localization)/config/itri.yaml" command="load" />
+        <rosparam param="result_save_path" subst_value="True">$(arg save_path)</rosparam>
+    </node> -->
+    
+    <!-- <node pkg="localization" type="localizer_base" name="localizer_base" output="screen">
+        <rosparam file="$(find localization)/config/itri.yaml" command="load" />
+        <rosparam param="result_save_path" subst_value="True">$(arg save_path)</rosparam>
+    </node> -->
+
+    <node pkg="localization" type="localizer_icp_1" name="localizer_icp_1" output="screen">
+        <rosparam file="$(find localization)/config/nuscenes.yaml" command="load" />
+        <param name="map_path" type="string" value="/home/gogochiou/SDC_ws/data/itri_map.pcd" />
+        <param name="init_yaw" type="double" value="2.448"/>
+        <rosparam param="result_save_path" subst_value="True">$(arg save_path)</rosparam>
+    </node>
+
+</launch>

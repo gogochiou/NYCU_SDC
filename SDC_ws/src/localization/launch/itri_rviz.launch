@@ -1,0 +1,10 @@
+<launch>
+
+    <!-- <arg name="save_path" default="$(find localization)/results/Result_1/cliper/results_1106_0.csv" /> -->
+    <!-- <arg name="save_path" default="$(find localization)/results/Result_1/passthrough/results_1106_0.csv" /> -->
+    <!-- <arg name="save_path" default="$(find localization)/results/Result_1/voxelgrid/1106_leaf0.5_newfunction.csv" /> -->
+    <param name="use_sim_time" value="true" />
+    <!-- <node pkg="rviz" type="rviz" name="display_result" output="screen" args="-d $(find localization)/config/itri.rviz" /> -->
+    <node pkg="rviz" type="rviz" name="display_result" output="screen" args="-d $(find localization)/config/nuscenes.rviz" />
+
+</launch>
